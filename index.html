@@ -3,46 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Portfolio</title>
+  <title>Sarthak Agrawal | AI Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navigation -->
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <div class="container">
 
-  <!-- Sections -->
-  <section id="home">
-    <h1>Hi, I'm [Your Name]</h1>
-    <p>Welcome to my portfolio!</p>
-  </section>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile">
+        <img src="https://github.com/IamME1311.png" alt="Profile" class="avatar" />
+        <h1>Sarthak Agrawal</h1>
+        <p>AI Engineer, RippleLinks</p>
+        <p>Bengaluru, India</p>
+        <div class="links">
+          <a href="mailto:sarthak.agrawal1311@gmail.com">Email</a> |
+          <a href="https://linkedin.com/in/sarthakagrawal11/" target="_blank">LinkedIn</a> |
+          <a href="https://github.com/IamME1311" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </aside>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Write a short intro about yourself here.</p>
-  </section>
+    <!-- Main Area -->
+    <main class="main">
+      <nav class="navbar">
+        <ul>
+          <li><a href="#" data-section="about" class="active">About</a></li>
+          <li><a href="#" data-section="resume">Resume</a></li>
+          <li><a href="#" data-section="skills">Skills</a></li> <!-- NEW -->
+          <li><a href="#" data-section="projects">Projects</a></li>
+          <li><a href="#" data-section="contact">Contact</a></li>
+        </ul>
+      </nav>
 
-  <section id="resume">
-    <h2>Resume</h2>
-    <p>Download my resume or list experience/skills here.</p>
-  </section>
+      <div class="content">
+        <!-- About -->
+        <div id="about" class="section active">
+          <h2>About Me</h2>
+          <p>Hi, I'm <strong>Sarthak Agrawal</strong> — an AI Engineer passionate about building intelligent systems that bridge research and production. With hands-on experience in <b>LLM/VLM agent frameworks, FastAPI, Docker,</b> and <b>cloud deployments</b>, I focus on crafting efficient, real-world AI solutions.</p>
+          <p>I love translating complex ideas into simple, scalable products — from <b>fine-tuning LoRA models</b> to <b>developing async ML backends</b> for low-VRAM GPUs. Currently, I’m working at RippleLinks, designing AI tools that power next-gen creative workflows.</p>
+        </div>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <p>Showcase your best work here.</p>
-  </section>
+        <!-- Resume -->
+        <div id="resume" class="section">
+          <h2>Resume</h2>
+          <h3>Experience</h3>
+          <ul>
+            <li><strong>AI Engineer – RippleLinks</strong> (Jun 2024 – Present, Bengaluru)</li>
+            <li><strong>Data Science Intern – Innomatics Research Labs</strong> (Jan 2024 – Apr 2024)</li>
+          </ul>
+          <h3>Education</h3>
+          <p><strong>MCA – Machine Learning & AI</strong>, Amity University (2022–2024)</p>
+          <div class="resume-download">
+            <a href="Sarthak%20Agrawal's%20Resume.pdf" download class="btn">Download My Resume</a>
+          </div>
+        </div>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Include email or form.</p>
-  </section>
+        <!-- NEW Skills Section -->
+        <div id="skills" class="section">
+          <h2>Skills</h2>
+          <p>Here’s a quick overview of the tools and frameworks I work with most:</p>
+          <ul>
+            <li><b>Languages:</b> Python, SQL, JavaScript</li>
+            <li><b>Frameworks:</b> FastAPI, LangChain, LlamaIndex</li>
+            <li><b>ML/AI Tools:</b> Stable Diffusion, LoRA, RAG, LangGraph, SmolAgents</li>
+            <li><b>Cloud & DevOps:</b> AWS, GCP, Docker, CI/CD</li>
+            <li><b>Other Skills:</b> Semantic Search, API Integration, Prompt Engineering</li>
+          </ul>
+        </div>
+
+        <!-- Projects -->
+        <div id="projects" class="section">
+          <h2>Projects</h2>
+          <p>ClauseGuard – LLM-powered contract analysis agent.</p>
+          <p>Semantic Subtitle Search Engine – Contextual media search tool.</p>
+        </div>
+
+        <!-- Contact -->
+        <div id="contact" class="section">
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:sarthak.agrawal1311@gmail.com">sarthak.agrawal1311@gmail.com</a></p>
+        </div>
+      </div>
+    </main>
+  </div>
 
   <script src="script.js"></script>
 </body>
