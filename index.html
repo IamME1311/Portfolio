@@ -1,94 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sarthak Agrawal | AI Engineer</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Icons -->
+  <link href="https://unpkg.com/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <div class="container">
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container nav-wrap">
+      <a href="#" class="logo">Sarthak<span>.</span></a>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="profile">
-        <img src="https://github.com/IamME1311.png" alt="Profile" class="avatar" />
-        <h1>Sarthak Agrawal</h1>
-        <p>AI Engineer, RippleLinks</p>
-        <p>Bengaluru, India</p>
-        <div class="links">
-          <a href="mailto:sarthak.agrawal1311@gmail.com">Email</a> |
-          <a href="https://linkedin.com/in/sarthakagrawal11/" target="_blank">LinkedIn</a> |
-          <a href="https://github.com/IamME1311" target="_blank">GitHub</a>
-        </div>
-      </div>
-    </aside>
-
-    <!-- Main Area -->
-    <main class="main">
-      <nav class="navbar">
-        <ul>
-          <li><a href="#" data-section="about" class="active">About</a></li>
-          <li><a href="#" data-section="resume">Resume</a></li>
-          <li><a href="#" data-section="skills">Skills</a></li> <!-- NEW -->
-          <li><a href="#" data-section="projects">Projects</a></li>
-          <li><a href="#" data-section="contact">Contact</a></li>
-        </ul>
+      <nav class="nav" id="nav">
+        <a class="nav__link active" href="#home">Home</a>
+        <a class="nav__link" href="#about">About</a>
+        <a class="nav__link" href="#skills">Skills</a>
+        <a class="nav__link" href="#projects">Projects</a>
+        <a class="nav__link" href="#contact">Contact</a>
+        <a class="btn btn--ghost" href="assets/Sarthak Agrawal's Resume.pdf" download>
+          <i class="ri-download-2-line"></i> Resume
+        </a>
       </nav>
 
-      <div class="content">
-        <!-- About -->
-        <div id="about" class="section active">
-          <h2>About Me</h2>
-          <p>Hi, I'm <strong>Sarthak Agrawal</strong> — an AI Engineer passionate about building intelligent systems that bridge research and production. With hands-on experience in <b>LLM/VLM agent frameworks, FastAPI, Docker,</b> and <b>cloud deployments</b>, I focus on crafting efficient, real-world AI solutions.</p>
-          <p>I love translating complex ideas into simple, scalable products — from <b>fine-tuning LoRA models</b> to <b>developing async ML backends</b> for low-VRAM GPUs. Currently, I’m working at RippleLinks, designing AI tools that power next-gen creative workflows.</p>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+        <i class="ri-menu-3-line"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="section hero" id="home">
+    <div class="container hero__grid">
+      <div class="hero__content">
+        <p class="eyebrow">AI Engineer · Bengaluru</p>
+        <h1 class="hero__title">Hi, I’m <span>Sarthak</span> — I build real-world AI systems.</h1>
+        <p class="hero__desc">
+          I turn research into production: LLM/VLM agents, async FastAPI backends, LoRA fine-tuning, and
+          containerized ML on AWS/GCP.
+        </p>
+        <div class="hero__cta">
+          <a class="btn" href="#projects">View Projects</a>
+          <a class="btn btn--ghost" href="#contact">Contact</a>
         </div>
 
-        <!-- Resume -->
-        <div id="resume" class="section">
-          <h2>Resume</h2>
-          <h3>Experience</h3>
-          <ul>
-            <li><strong>AI Engineer – RippleLinks</strong> (Jun 2024 – Present, Bengaluru)</li>
-            <li><strong>Data Science Intern – Innomatics Research Labs</strong> (Jan 2024 – Apr 2024)</li>
-          </ul>
-          <h3>Education</h3>
-          <p><strong>MCA – Machine Learning & AI</strong>, Amity University (2022–2024)</p>
-          <div class="resume-download">
-            <a href="Sarthak%20Agrawal's%20Resume.pdf" download class="btn">Download My Resume</a>
-          </div>
-        </div>
-
-        <!-- NEW Skills Section -->
-        <div id="skills" class="section">
-          <h2>Skills</h2>
-          <p>Here’s a quick overview of the tools and frameworks I work with most:</p>
-          <ul>
-            <li><b>Languages:</b> Python, SQL, JavaScript</li>
-            <li><b>Frameworks:</b> FastAPI, LangChain, LlamaIndex</li>
-            <li><b>ML/AI Tools:</b> Stable Diffusion, LoRA, RAG, LangGraph, SmolAgents</li>
-            <li><b>Cloud & DevOps:</b> AWS, GCP, Docker, CI/CD</li>
-            <li><b>Other Skills:</b> Semantic Search, API Integration, Prompt Engineering</li>
-          </ul>
-        </div>
-
-        <!-- Projects -->
-        <div id="projects" class="section">
-          <h2>Projects</h2>
-          <p>ClauseGuard – LLM-powered contract analysis agent.</p>
-          <p>Semantic Subtitle Search Engine – Contextual media search tool.</p>
-        </div>
-
-        <!-- Contact -->
-        <div id="contact" class="section">
-          <h2>Contact</h2>
-          <p>Email: <a href="mailto:sarthak.agrawal1311@gmail.com">sarthak.agrawal1311@gmail.com</a></p>
+        <div class="socials">
+          <a href="mailto:sarthak.agrawal1311@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Sarthak," target="_blank" rel="noreferrer" aria-label="Send email"><i class="ri-mail-line"></i></a>
+          <a href="https://linkedin.com/in/sarthakagrawal11" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i
+              class="ri-linkedin-fill"></i></a>
+          <a href="https://github.com/IamME1311" target="_blank" rel="noreferrer" aria-label="GitHub"><i
+              class="ri-github-fill"></i></a>
         </div>
       </div>
-    </main>
-  </div>
+
+      <div class="hero__media">
+        <img class="avatar" src="assets/portfolio_img.jpg" alt="Sarthak Agrawal" />
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container two-col">
+      <div>
+        <h2 class="section__title">About Me</h2>
+        <p>
+          I’m an AI Engineer focused on LLM/VLM agent frameworks, semantic search, and scalable backend systems.
+          I’ve built image-generation agents (Flux/SD) from unstructured briefs, fine-tuned LoRA models for
+          underrepresented scenarios, and shipped Dockerized ML apps across AWS/GCP with efficient GPU memory usage.
+        </p>
+        <p>
+          Previously at Innomatics, I engineered a semantic subtitle search engine (84k files) and a RAG pipeline
+          with LangChain + Gemini for contextual answers.
+        </p>
+        <div class="about__badges">
+          <span class="badge">FastAPI</span>
+          <span class="badge">LangGraph</span>
+          <span class="badge">LlamaIndex</span>
+          <span class="badge">RAG</span>
+          <span class="badge">Docker</span>
+          <span class="badge">AWS/GCP</span>
+        </div>
+      </div>
+      <div class="about__card">
+        <h3>Quick Info</h3>
+        <ul class="list">
+          <li><i class="ri-briefcase-line"></i> AI Engineer, RippleLinks (2024—)</li>
+          <li><i class="ri-graduation-cap-line"></i> MCA (ML & AI), Amity — 8.5 CGPA</li>
+          <li><i class="ri-map-pin-line"></i> Bengaluru, India</li>
+        </ul>
+        <a class="btn btn--full" href="assets/Sarthak Agrawal's Resume.pdf" download>
+          <i class="ri-download-2-line"></i> Download Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills / Services -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section__title">Skills</h2>
+      <div class="cards">
+        <article class="card">
+          <i class="ri-cpu-line card__icon"></i>
+          <h3>AI & Agents</h3>
+          <p>LLM/VLM agents, LoRA, embeddings, semantic search, LangGraph, SmolAgents.</p>
+        </article>
+        <article class="card">
+          <i class="ri-server-line card__icon"></i>
+          <h3>Backend</h3>
+          <p>Async FastAPI, REST, auth, vector DBs, streaming, observability.</p>
+        </article>
+        <article class="card">
+          <i class="ri-docker-line card__icon"></i>
+          <h3>DevOps & Cloud</h3>
+          <p>Docker, CI/CD, GPU scheduling, AWS/GCP deployments, IaC basics.</p>
+        </article>
+        <article class="card">
+          <i class="ri-image-2-line card__icon"></i>
+          <h3>GenAI</h3>
+          <p>Flux/SD pipelines, control, upscaling, prompt systems, dataset prep.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="container">
+      <h2 class="section__title">Projects</h2>
+
+      <div class="grid">
+        <!-- Project 1 -->
+        <a class="work" href="#" aria-label="ClauseGuard details">
+          <div class="work__media">
+            <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1200&auto=format&fit=crop"
+              alt="ClauseGuard" />
+          </div>
+          <div class="work__meta">
+            <h3>ClauseGuard</h3>
+            <p>Contract intelligence with LlamaIndex, LlamaParse & Gemini 2.5 Flash.</p>
+          </div>
+        </a>
+        <!-- Project 2 -->
+        <a class="work" href="#" aria-label="Subtitle Search details">
+          <div class="work__media">
+            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop"
+              alt="Semantic Subtitle Search" />
+          </div>
+          <div class="work__meta">
+            <h3>Semantic Subtitle Search</h3>
+            <p>84k files · sentence-transformers · cosine ranking · deep retrieval.</p>
+          </div>
+        </a>
+        <!-- Project 3 -->
+        <a class="work" href="#" aria-label="Image Agent details">
+          <div class="work__media">
+            <img src="https://images.unsplash.com/photo-1602524206319-07c3d7c1a52e?q=80&w=1200&auto=format&fit=crop"
+              alt="Creative Image Agent" />
+          </div>
+          <div class="work__meta">
+            <h3>Creative Image Agent</h3>
+            <p>Flux/SD from client briefs · LoRA fine-tune · low-VRAM execution.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section__title">Contact</h2>
+      <div class="two-col contact__grid">
+        <div>
+          <p>Open to roles, collaborations, and interesting problems.</p>
+          <ul class="list">
+            <li><i class="ri-mail-line"></i> sarthak.agrawal1311@gmail.com</li>
+            <li><i class="ri-linkedin-box-fill"></i> /in/sarthakagrawal11</li>
+            <li><i class="ri-github-fill"></i> @IamME1311</li>
+          </ul>
+        </div>
+        <form class="form" onsubmit="event.preventDefault(); alert('Thanks! I’ll get back to you.');">
+          <input class="input" type="text" placeholder="Your name" required />
+          <input class="input" type="email" placeholder="Email" required />
+          <textarea class="input" rows="4" placeholder="Message"></textarea>
+          <button class="btn btn--full" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__wrap">
+      <p>© <span id="year"></span> Sarthak Agrawal. All rights reserved.</p>
+      <a href="#home" class="to-top" aria-label="Back to top"><i class="ri-arrow-up-s-line"></i></a>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
