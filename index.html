@@ -26,7 +26,7 @@
         <a class="nav__link" href="#skills">Skills</a>
         <a class="nav__link" href="#projects">Projects</a>
         <a class="nav__link" href="#contact">Contact</a>
-        <a class="btn btn--ghost" href="assets/Sarthak Agrawal's Resume.pdf" download>
+        <a class="btn btn--ghost" href="assets/Resume Sarthak.pdf" download>
           <i class="ri-download-2-line"></i> Resume
         </a>
       </nav>
@@ -42,10 +42,10 @@
     <div class="container hero__grid">
       <div class="hero__content">
         <p class="eyebrow">AI Engineer · Bengaluru</p>
-        <h1 class="hero__title">Hi, I’m <span>Sarthak</span> — I build real-world AI systems.</h1>
+        <h1 class="hero__title">Hi, I’m <span>Sarthak</span> — I design and ship production-grade AI systems.</h1>
         <p class="hero__desc">
-          I turn research into production: LLM/VLM agents, async FastAPI backends, LoRA fine-tuning, and
-          containerized ML on AWS/GCP.
+          I build LLM/VLM agents, high-throughput FastAPI backends, and GPU-efficient GenAI systems —
+          from research to real production workloads.
         </p>
         <div class="hero__cta">
           <a class="btn" href="#projects">View Projects</a>
@@ -62,7 +62,7 @@
       </div>
 
       <div class="hero__media">
-        <img class="avatar" src="assets/portfolio_img.png" alt="Sarthak Agrawal" />
+        <img class="avatar" src="assets/portfolio_img.png" loading="lazy" alt="Sarthak Agrawal" />
       </div>
     </div>
   </section>
@@ -73,14 +73,19 @@
       <div>
         <h2 class="section__title">About Me</h2>
         <p>
-          I’m an AI Engineer focused on LLM/VLM agent frameworks, semantic search, and scalable backend systems.
-          I’ve built image-generation agents (Flux/SD) from unstructured briefs, fine-tuned LoRA models for
-          underrepresented scenarios, and shipped Dockerized ML apps across AWS/GCP with efficient GPU memory usage.
+          I’m an AI Engineer specializing in LLM/VLM agent systems, semantic search, and scalable ML backends.
+          I focus on turning ambiguous requirements into reliable, production-ready AI pipelines.
         </p>
         <p>
-          Previously at Innomatics, I engineered a semantic subtitle search engine (84k files) and a RAG pipeline
-          with LangChain + Gemini for contextual answers.
+          I’ve built image-generation agents from unstructured briefs, fine-tuned LoRA models for
+          underrepresented scenarios, and deployed Dockerized GPU workloads across AWS and GCP
+          with strict memory and latency constraints.
         </p>
+        <p>
+          Previously at Innomatics, I engineered a semantic subtitle search engine across 84k files
+          and a LangChain-based RAG system using Gemini for contextual question answering.
+        </p>
+
         <div class="about__badges">
           <span class="badge">FastAPI</span>
           <span class="badge">LangGraph</span>
@@ -97,7 +102,7 @@
           <li><i class="ri-graduation-cap-line"></i> MCA (ML & AI), Amity — 8.5 CGPA</li>
           <li><i class="ri-map-pin-line"></i> Bengaluru, India</li>
         </ul>
-        <a class="btn btn--full" href="assets/Sarthak Agrawal's Resume.pdf" download>
+        <a class="btn btn--full" href="assets/Resume Sarthak.pdf" download>
           <i class="ri-download-2-line"></i> Download Resume
         </a>
       </div>
@@ -107,17 +112,17 @@
   <!-- Skills / Services -->
   <section class="section" id="skills">
     <div class="container">
-      <h2 class="section__title">Skills</h2>
+      <h2 class="section__title">Capabilities</h2>
       <div class="cards">
         <article class="card">
           <i class="ri-cpu-line card__icon"></i>
-          <h3>AI & Agents</h3>
-          <p>LLM/VLM agents, LoRA, embeddings, semantic search, LangGraph, SmolAgents.</p>
+          <h3>AI & Agent Systems</h3>
+          <p>Designing LLM/VLM agents, LoRA fine-tuning, embeddings, LangGraph orchestration, semantic retrieval.</p>
         </article>
         <article class="card">
           <i class="ri-server-line card__icon"></i>
-          <h3>Backend</h3>
-          <p>Async FastAPI, REST, auth, vector DBs, streaming, observability.</p>
+          <h3>Backend & APIs</h3>
+          <p>Async FastAPI services, streaming responses, auth, vector DB integration, observability.</p>
         </article>
         <article class="card">
           <i class="ri-docker-line card__icon"></i>
@@ -140,36 +145,52 @@
 
       <div class="grid">
         <!-- Project 1 -->
-        <a class="work" href="#" aria-label="ClauseGuard details">
+        <a class="work" href="clauseguard.html" aria-label="ClauseGuard details">
           <div class="work__media">
-            <img src="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1200&auto=format&fit=crop"
+            <img src="assets/clauseguard_img.png"
+            loading="lazy"
               alt="ClauseGuard" />
           </div>
           <div class="work__meta">
             <h3>ClauseGuard</h3>
-            <p>Contract intelligence with LlamaIndex, LlamaParse & Gemini 2.5 Flash.</p>
+            <p class="work__hint">LLM-powered contract intelligence system</p>
+            <p>
+              Contract intelligence agent for clause analysis & risk extraction ·
+              LlamaIndex + LlamaParse + Gemini · production-ready RAG
+            </p>
+            <p class="work__decision">
+              Key decision: modular RAG pipeline for extensibility across document types
+            </p>
           </div>
         </a>
         <!-- Project 2 -->
-        <a class="work" href="#" aria-label="Subtitle Search details">
+        <a class="work" href="#search_engine" aria-label="Subtitle Search details">
           <div class="work__media">
-            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1200&auto=format&fit=crop"
+            <img src="assets/search_enigne_flow.png"
+              loading="lazy"
               alt="Semantic Subtitle Search" />
           </div>
           <div class="work__meta">
             <h3>Semantic Subtitle Search</h3>
-            <p>84k files · sentence-transformers · cosine ranking · deep retrieval.</p>
+            <p>Semantic search across 84k subtitle files · sentence-transformers · cosine ranking</p>
+            <p class="work__decision">
+              Key decision: embedding-based retrieval over keyword search for recall at scale
+            </p>
           </div>
         </a>
         <!-- Project 3 -->
-        <a class="work" href="#" aria-label="Image Agent details">
+        <a class="work" href="#imagegen" aria-label="Image Agent details">
           <div class="work__media">
-            <img src="https://images.unsplash.com/photo-1602524206319-07c3d7c1a52e?q=80&w=1200&auto=format&fit=crop"
+            <img src="assets/creative_img_agent.png"
+              loading="lazy"
               alt="Creative Image Agent" />
           </div>
           <div class="work__meta">
             <h3>Creative Image Agent</h3>
-            <p>Flux/SD from client briefs · LoRA fine-tune · low-VRAM execution.</p>
+            <p>Client-brief → image pipeline · Flux/SD · LoRA fine-tuning under low-VRAM constraints</p>
+            <p class="work__decision">
+              Key decision: LoRA fine-tuning to enable generation under strict VRAM limits
+            </p>
           </div>
         </a>
       </div>

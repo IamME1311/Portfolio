@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>ClauseGuard | Case Study</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+  <section class="section">
+    <div class="container" style="max-width: 820px">
+
+      <p class="eyebrow">Case Study</p>
+      <h1>ClauseGuard</h1>
+      <p class="work__hint">Production-grade contract intelligence system</p>
+
+      <p>
+        ClauseGuard is an LLM-powered contract intelligence agent designed to analyze legal documents, extract critical clauses, and surface risk signals with high contextual accuracy.
+        It is built as a modular, production-ready RAG system capable of handling diverse legal document formats at scale.
+      </p>
+
+      <h2>Problem</h2>
+      <p>
+        Legal contracts are long, heterogeneous, and context-dense.
+        Critical risk often lies not in single clauses, but in how clauses interact across sections.
+
+        Traditional keyword search and rule-based extraction fail because:
+        <ul>
+            <li>Legal language is highly paraphrased</li>
+            <li>Clause meaning depends on surrounding context</li>
+            <li>Contracts vary significantly across jurisdictions and templates</li>
+        </ul>
+        The goal was to build a system that could reason over contracts, not just search them.
+      </p>
+
+      <h2>Constraints</h2>
+      <p>ClauseGuard was designed under real-world constraints: 
+        <ul>
+            <li>Unstructured PDFs and inconsistent formatting</li>
+            <li>High recall requirements</li>
+            <li>Low latency expectations</li>
+            <li>Need for long-term extensibility</li>
+        </ul>
+        These constraints ruled out naive prompt-only approaches.</p>
+      
+      <h2>System Architecture</h2>
+      <p>
+        ClauseGuard uses a modular Retrieval-Augmented Generation (RAG) pipeline with LlamaParse,
+        LlamaIndex, and Gemini to separate ingestion, retrieval, and reasoning.
+      </p>
+      <ol>
+        <li><strong>Document ingestion & parsing</strong> 
+            <ul>
+                <li>Legal documents are parsed using LlamaParse</li>
+                <li>Structure is preserved to retain section-level semantics</li>
+            </ul>
+        </li>
+        <li> <strong>Indexing & retrieval</strong>
+            <ul>
+                <li>Parsed content is indexed via LlamaIndex</li>
+                <li>Semantic retrieval ensures relevant clause context is fetched, not just keyword matches</li>
+            </ul>
+        </li>
+        <li><strong>Reasoning layer</strong>
+            <ul>
+                <li>Retrieved context is passed to Gemini for clause analysis and risk interpretation</li>
+                <li>Outputs include clause summaries, risk indicators, and contextual explanations</li>
+            </ul>
+        </li>
+        <li><strong>Orchestration</strong> 
+            <ul>
+                <li>The pipeline is designed to be modular, enabling independent upgrades to parsing, retrieval, or model layers</li>
+            </ul>
+        </li>
+      </ol>
+      <p>This architecture allows the system to evolve without tight coupling to any single model or vendor.</p>
+
+
+
+
+      <h2>Key Engineering Decisions</h2>
+      <ol>
+        <li>
+            <strong>Modular RAG over monolithic prompting</strong> for maintainability.
+            <p>Instead of embedding all logic into a single prompt, the system separates:</p>
+            <ul>
+                <li>parsing</li>
+                <li>retrieval</li>
+                <li>reasoning</li>
+            </ul>
+            <p>This significantly improves debuggability and long-term maintainability.</p>
+        </li>
+        <li>
+            <strong>Semantic retrieval over keyword search</strong>
+            <br>
+            <br>
+            Legal risk often spans multiple sections.
+            Embedding-based retrieval ensures contextual completeness, especially for obligations and exceptions.
+            <br>
+            <br>
+        </li>
+        <li>
+            <strong>Vendor-agnostic design</strong>
+            <br>
+            <br>
+            Although Gemini is used for reasoning, the architecture allows model swapping without refactoring the entire system.
+            <br>
+        </li>
+      </ol>
+
+      <h2>Outcome & Learnings</h2>
+      <ul>
+        <li>Achieved <strong>high-recall clause extraction</strong> across varied contract formats</li>
+        <li>Improved explanation quality by grounding LLM responses in retrieved context</li>
+        <li>The modular design made it easy to iterate on parsing quality without touching downstream logic</li>
+      </ul>
+      <p>
+        Most importantly, the project reinforced that <strong>LLM systems succeed or fail at the architecture level</strong>, not the prompt level.
+      </p>
+
+      <h2>Tech Stack</h2>
+      <ul>
+        <li><strong>LlamaParse</strong> -- document parsing</li>
+        <li><strong>LlamaIndex</strong> -- indexing & retrieval</li>
+        <li><strong>Gemini</strong> -- reasoning & analysis</li>
+        <li><strong>Python / FastAPI</strong> -- backend services</li>
+        <li><strong>Docker</strong> -- deployment & reproducibility</li>
+      </ul>
+
+    </div>
+  </section>
+</body>
+</html>
