@@ -1,10 +1,9 @@
-//  Enable ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.from(".title", {
   y: 40,
   opacity: 0,
-  duration: 2,
+  duration: 0.8,
 });
 
 gsap.from(".tech-item", {
@@ -14,17 +13,17 @@ gsap.from(".tech-item", {
   },
   y: 30,
   opacity: 0,
-  stagger: 0.2,
-  delay: 0.5,
+  stagger: 0.15,
+  delay: 0.3,
 });
 
 document.querySelectorAll(".tech-item").forEach((item) => {
   item.addEventListener("mouseenter", () => {
-    gsap.to(item, { y: -6, duration: 0.4 });
+    gsap.to(item, { y: -6, duration: 0.3 });
   });
 
   item.addEventListener("mouseleave", () => {
-    gsap.to(item, { y: 0, duration: 0.4 });
+    gsap.to(item, { y: 0, duration: 0.3 });
   });
 });
 
@@ -58,14 +57,14 @@ new Typed("#terminal2", {
 });
 
 new Typed("#terminal3", {
-  strings: ["> python\n> fastapi\n> langchain\n> aws\n> docker\n> postgres"],
+  strings: ["> python\n> fastapi\n> langchain\n> llamaindex\n> aws\n> docker\n> postgres"],
   typeSpeed: 30,
   showCursor: true,
 });
 
 new Typed("#terminal4", {
   strings: [
-    "> loading projects...\n> agentic-engine.py\n> rag-system.py\n> semantic-search.py\n> done.",
+    "> loading projects...\n> multi_agent_research/  [IN DEV]\n> rag_eval_dashboard/   [IN DEV]\n> llm_gateway/          [IN DEV]",
   ],
   typeSpeed: 30,
   showCursor: true,
@@ -84,12 +83,11 @@ document.querySelectorAll(".project-card").forEach((card) => {
     const rect = card.getBoundingClientRect();
     const x = e.clientX - rect.left - rect.width / 2;
     const y = e.clientY - rect.top - rect.height / 2;
-
-    card.style.transform = `translate(${x * 0.1}px, ${y * 0.1}px)`;
+    card.style.transform = `translate(${x * 0.05}px, ${y * 0.05 - 10}px)`;
   });
 
   card.addEventListener("mouseleave", () => {
-    card.style.transform = "translate(0,0)";
+    card.style.transform = "translate(0, 0)";
   });
 });
 
@@ -97,11 +95,31 @@ window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY;
   const height = document.documentElement.scrollHeight - window.innerHeight;
   const percent = (scrollTop / height) * 100;
-
   const progress = document.getElementById("progress");
   if (progress) progress.style.width = percent + "%";
 });
 
+// Dot nav — highlight active section via IntersectionObserver
+const dotLinks = document.querySelectorAll("#dot-nav a");
+const sections = document.querySelectorAll("section[id]");
+
+const sectionObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        dotLinks.forEach((link) => {
+          link.classList.toggle("active", link.getAttribute("href") === `#${id}`);
+        });
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+
+sections.forEach((s) => sectionObserver.observe(s));
+
+// Email modal
 const email = "sarthak.agrawal1311@gmail.com";
 
 const emailBtn = document.getElementById("emailBtn");
@@ -119,12 +137,19 @@ closeModal.addEventListener("click", () => {
   modal.style.display = "none";
 });
 
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) modal.style.display = "none";
+});
+
 openMail.addEventListener("click", () => {
   window.location.href = `mailto:${email}`;
 });
 
 copyMail.addEventListener("click", async () => {
   await navigator.clipboard.writeText(email);
-  copyMail.innerText = "Copied!";
-  setTimeout(() => (copyMail.innerHTML='<img src="./copy.png" alt="copy-icon"><span>Copy Email</span>'), 1200);
+  copyMail.querySelector("span").textContent = "Copied!";
+  setTimeout(() => {
+    copyMail.innerHTML =
+      '<img src="./assets/copy_icon.png" alt="copy email address"><span>Copy Email</span>';
+  }, 1200);
 });

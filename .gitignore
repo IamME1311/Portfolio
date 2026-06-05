@@ -1,0 +1,14 @@
+# Node.js (used for PDF generation script only, not part of the site)
+node_modules/
+package-lock.json
+package.json
+
+# Local dev files
+.DS_Store
+Thumbs.db
+
+# assets to ignore
+assets/resume.html
+
+*.md
+*mcp

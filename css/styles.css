@@ -9,6 +9,7 @@ body {
 
 html {
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 pre {
@@ -29,13 +30,12 @@ pre {
 
 .light {
   flex: 6;
-  background: #f5f5f5;
+  position: relative;
+  overflow: hidden;
+  background-color: #f5f5f5;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.07) 1.5px, transparent 1.5px);
+  background-size: 24px 24px;
   padding: 60px;
-  transition: transform 0.4s ease;
-}
-
-.light:hover {
-  transform: scale(1.01);
 }
 
 .dark {
@@ -48,6 +48,36 @@ pre {
 
 .section:not(:first-child) .light {
   padding-top: 100px;
+}
+
+/* =====================
+   DOT NAV
+===================== */
+
+#dot-nav {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 100;
+}
+
+#dot-nav a {
+  width: 10px;
+  height: 10px;
+  border: 2px solid black;
+  border-radius: 50%;
+  display: block;
+  background: transparent;
+  transition: background 0.2s, transform 0.2s;
+}
+
+#dot-nav a.active {
+  background: #ffd600;
+  transform: scale(1.3);
 }
 
 /* =====================
@@ -84,6 +114,7 @@ pre {
   max-width: 600px;
   margin-top: 30px;
   font-size: 18px;
+  line-height: 1.7;
 }
 
 /* =====================
@@ -110,7 +141,6 @@ pre {
   font-weight: 700;
   cursor: pointer;
   background: white;
-
   transition: background 0.35s ease, box-shadow 0.25s ease;
 }
 
@@ -128,6 +158,16 @@ pre {
   box-shadow: 0 10px 0 black;
 }
 
+.llamaindex-item {
+  gap: 0;
+}
+
+.tech-name-badge {
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
 /* =====================
    PROJECTS
 ===================== */
@@ -143,7 +183,10 @@ pre {
   border: 3px solid black;
   padding: 20px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, background 0.3s ease;
+  color: inherit;
+  text-decoration: none;
+  display: block;
 }
 
 .project-card:hover {
@@ -156,9 +199,29 @@ pre {
   font-weight: 800;
 }
 
+.project-card p {
+  margin-top: 8px;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
 .project-card span {
   font-size: 12px;
   opacity: 0.7;
+  display: block;
+  margin-top: 10px;
+}
+
+.badge {
+  font-size: 10px;
+  font-weight: 800;
+  background: #0b0b0b;
+  color: #ffd600;
+  padding: 3px 8px;
+  letter-spacing: 0.1em;
+  display: inline-block;
+  margin-top: 12px;
 }
 
 /* =====================
@@ -178,6 +241,14 @@ pre {
 .job h3 {
   font-weight: 800;
   font-size: 20px;
+}
+
+.job-date {
+  font-size: 13px;
+  font-family: "JetBrains Mono", monospace;
+  color: #666;
+  margin-top: 4px;
+  margin-bottom: 0;
 }
 
 .job p {
@@ -201,6 +272,7 @@ pre {
   padding: 12px 20px;
   text-decoration: none;
   color: black;
+  transition: background 0.2s ease;
 }
 
 .contact a:hover {
@@ -214,7 +286,7 @@ pre {
 .email-modal {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   display: none;
   align-items: center;
   justify-content: center;
@@ -244,11 +316,11 @@ pre {
   font-weight: 700;
   cursor: pointer;
   border-radius: 12px;
-
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
+  transition: background 0.2s ease;
 }
 
 .email-box button:hover {
@@ -280,6 +352,7 @@ pre {
   font-weight: 800;
   text-decoration: none;
   color: black;
+  transition: background 0.2s ease;
 }
 
 .resume-btn:hover {
@@ -298,6 +371,78 @@ pre {
   background: #ffd600;
   width: 0%;
   z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* =====================
+   BG WATERMARK NUMBER
+===================== */
+
+.bg-num {
+  position: absolute;
+  right: 30px;
+  bottom: -20px;
+  font-size: 220px;
+  font-weight: 900;
+  color: rgba(0, 0, 0, 0.04);
+  font-family: Inter, system-ui;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  letter-spacing: -0.05em;
+}
+
+/* =====================
+   ABOUT LAYOUT
+===================== */
+
+.about-grid {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.about-left {
+  flex: 1;
+}
+
+.about-left .section-title {
+  margin-top: 0;
+}
+
+.about-right {
+  flex: 0 0 260px;
+}
+
+.stat-card {
+  border: 3px solid black;
+  background: white;
+}
+
+.stat-row {
+  padding: 14px 18px;
+  border-bottom: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stat-row:last-child {
+  border-bottom: none;
+}
+
+.stat-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #888;
+  font-family: "JetBrains Mono", monospace;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: 700;
 }
 
 /* =====================
@@ -305,6 +450,9 @@ pre {
 ===================== */
 
 @media (max-width: 900px) {
+  #dot-nav {
+    display: none;
+  }
 
   .section {
     height: auto;
@@ -337,5 +485,15 @@ pre {
 
   .dark {
     padding: 20px;
+  }
+
+  .about-grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .about-right {
+    flex: unset;
+    width: 100%;
   }
 }

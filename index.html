@@ -2,8 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Sarthak Agrawal</title>
+    <title>Sarthak Agrawal — Agentic AI Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sarthak Agrawal — Agentic AI Engineer. Building autonomous AI systems, RAG pipelines, and LLM infrastructure." />
+    <meta property="og:title" content="Sarthak Agrawal — Agentic AI Engineer" />
+    <meta property="og:description" content="Building autonomous AI systems using LLMs, FastAPI, and cloud infrastructure." />
+    <meta property="og:type" content="website" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
@@ -13,7 +17,6 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=JetBrains+Mono&display=swap"
       rel="stylesheet"
@@ -23,49 +26,79 @@
   <body class="overflow-x-hidden">
     <div id="progress"></div>
 
-    <!-- HERO SECTION -->
-    <section class="section">
-      <div class="light">
-        <a class="resume-btn" href="./assets/Resume_Sarthak.pdf" download
-          >DOWNLOAD_RESUME</a
-        >
+    <nav id="dot-nav" aria-label="Page sections">
+      <a href="#s1" aria-label="Hero"></a>
+      <a href="#s2" aria-label="About"></a>
+      <a href="#s3" aria-label="Tech Stack"></a>
+      <a href="#s4" aria-label="Projects"></a>
+      <a href="#s5" aria-label="Experience"></a>
+      <a href="#s6" aria-label="Contact"></a>
+    </nav>
 
+    <!-- HERO -->
+    <section id="s1" class="section">
+      <div class="light">
+        <a class="resume-btn" href="./assets/Resume_Sarthak.pdf" download>DOWNLOAD_RESUME</a>
         <h1 class="title">SARTHAK AGRAWAL</h1>
         <p class="subtitle">Agentic AI Engineer</p>
-
         <div class="yellow-bar"></div>
+        <span class="bg-num">01</span>
       </div>
-
       <div class="dark">
         <pre id="terminal"></pre>
       </div>
     </section>
 
     <!-- ABOUT -->
-    <section class="section">
+    <section id="s2" class="section">
       <div class="light">
-        <h2 class="section-title">ABOUT_ME</h2>
-
-        <p class="about">
-          I build autonomous AI systems using LLMs, FastAPI, RAG pipelines and
-          cloud infra. Focused on production-grade agentic architectures.
-        </p>
+        <div class="about-grid">
+          <div class="about-left">
+            <h2 class="section-title">ABOUT_ME</h2>
+            <p class="about">
+              I build autonomous AI systems using LLMs, FastAPI, and cloud infrastructure.
+              My focus is production-grade agentic architectures — systems that reason,
+              use tools, and act without hand-holding. Currently building a multi-agent
+              research platform, a RAG evaluation suite, and an LLM observability gateway.
+            </p>
+          </div>
+          <div class="about-right">
+            <div class="stat-card">
+              <div class="stat-row">
+                <span class="stat-label">CURRENTLY</span>
+                <span class="stat-value">AI Engineer · RippleLinks</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">FOCUS</span>
+                <span class="stat-value">Agentic Architectures</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">BUILDING</span>
+                <span class="stat-value">3 AI Projects</span>
+              </div>
+              <div class="stat-row">
+                <span class="stat-label">STATUS</span>
+                <span class="stat-value">Open to Roles</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <span class="bg-num">02</span>
       </div>
-
       <div class="dark">
         <pre id="terminal2"></pre>
       </div>
     </section>
 
     <!-- SKILLS -->
-    <section class="section">
+    <section id="s3" class="section">
       <div class="light">
         <h2 class="section-title">TECH_STACK</h2>
-
         <div class="grid tech">
           <div class="tech-item">
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+              alt="Python"
             />
             <span>Python</span>
           </div>
@@ -73,6 +106,7 @@
           <div class="tech-item">
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg"
+              alt="FastAPI"
             />
             <span>FastAPI</span>
           </div>
@@ -80,6 +114,7 @@
           <div class="tech-item">
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+              alt="Docker"
             />
             <span>Docker</span>
           </div>
@@ -87,6 +122,7 @@
           <div class="tech-item">
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+              alt="AWS"
             />
             <span>AWS</span>
           </div>
@@ -94,20 +130,18 @@
           <div class="tech-item">
             <img
               src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+              alt="PostgreSQL"
             />
             <span>PostgreSQL</span>
           </div>
 
           <div class="tech-item">
-            <!-- <img
-              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-            /> -->
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 128 128"
-              id="Github-Actions-Icon"
               height="40"
               width="40"
+              aria-hidden="true"
             >
               <path
                 fill="#2088ff"
@@ -118,7 +152,6 @@
                 d="M109.334 90.666c-9.383 0-17.188 6.993-18.477 16.031a2.667 2.667 0 0 0-.265-.011l-2.7.09a2.667 2.667 0 0 0-2.578 2.751 2.667 2.667 0 0 0 2.752 2.578l2.7-.087a2.667 2.667 0 0 0 .097-.006C92.17 121.029 99.965 128 109.334 128c10.278 0 18.666-8.388 18.666-18.666s-8.388-18.668-18.666-18.668zm0 5.334a13.293 13.293 0 0 1 13.332 13.334 13.29 13.29 0 0 1-13.332 13.332A13.293 13.293 0 0 1 96 109.334 13.294 13.294 0 0 1 109.334 96z"
               />
             </svg>
-
             <span>CI/CD</span>
           </div>
 
@@ -127,11 +160,10 @@
               role="img"
               viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg"
-              id="Langchain--Streamline-Simple-Icons"
               height="40"
               width="40"
+              aria-label="LangChain"
             >
-              <desc>Langchain Streamline Icon: https://streamlinehq.com</desc>
               <title>LangChain</title>
               <path
                 d="M6.0988 5.9175C2.7359 5.9175 0 8.6462 0 12s2.736 6.0825 6.0988 6.0825h11.8024C21.2641 18.0825 24 15.3538 24 12s-2.736 -6.0825 -6.0988 -6.0825ZM5.9774 7.851c0.493 0.0124 1.02 0.2496 1.273 0.6228 0.3673 0.4592 0.4778 1.0668 0.8944 1.4932 0.5604 0.6118 1.199 1.1505 1.7161 1.802 0.4892 0.5954 0.8386 1.2937 1.1436 1.9975 0.1244 0.2335 0.1257 0.5202 0.31 0.7197 0.0908 0.1204 0.5346 0.4483 0.4383 0.5645 0.0555 0.1204 0.4702 0.286 0.3263 0.4027 -0.1944 0.04 -0.4129 0.0476 -0.5616 -0.1074 -0.0549 0.126 -0.183 0.0596 -0.2819 0.0432a4 4 0 0 0 -0.025 0.0736c-0.3288 0.0219 -0.5754 -0.3126 -0.732 -0.565 -0.3111 -0.168 -0.6642 -0.2702 -0.982 -0.446 -0.0182 0.2895 0.0452 0.6485 -0.231 0.8353 -0.014 0.5565 0.8436 0.0656 0.9222 0.4804 -0.061 0.0067 -0.1286 -0.0095 -0.1774 0.0373 -0.2239 0.2172 -0.4805 -0.1645 -0.7385 -0.007 -0.3464 0.174 -0.3808 0.3161 -0.8096 0.352 -0.0237 -0.0359 -0.0143 -0.0592 0.0059 -0.0811 0.1207 -0.1399 0.1295 -0.3046 0.3356 -0.3643 -0.2122 -0.0334 -0.3899 0.0833 -0.5686 0.1757 -0.2323 0.095 -0.2304 -0.2141 -0.5878 0.0164 -0.0396 -0.0322 -0.0208 -0.0615 0.0018 -0.0864 0.0908 -0.1107 0.2102 -0.127 0.345 -0.1208 -0.663 -0.3686 -0.9751 0.4507 -1.2813 0.0432 -0.092 0.0243 -0.1265 0.1068 -0.1845 0.1652 -0.05 -0.0548 -0.0123 -0.1212 -0.0099 -0.1857 -0.0598 -0.028 -0.1356 -0.041 -0.1179 -0.1366 -0.1171 -0.0395 -0.1988 0.0295 -0.286 0.0952 -0.0787 -0.0608 0.0532 -0.1492 0.0776 -0.2125 0.0702 -0.1216 0.23 -0.025 0.3111 -0.1126 0.2306 -0.1308 0.552 0.0814 0.8155 0.0455 0.203 0.0255 0.4544 -0.1825 0.3526 -0.39 -0.2171 -0.2767 -0.179 -0.6386 -0.1839 -0.9695 -0.0268 -0.1929 -0.491 -0.4382 -0.6252 -0.6462 -0.1659 -0.1873 -0.295 -0.4047 -0.4243 -0.6182 -0.4666 -0.9008 -0.3198 -2.0584 -0.9077 -2.8947 -0.266 0.1466 -0.6125 0.0774 -0.8418 -0.119 -0.1238 0.1125 -0.1292 0.2598 -0.139 0.4161 -0.297 -0.2962 -0.2593 -0.8559 -0.022 -1.1855 0.0969 -0.1302 0.2127 -0.2373 0.342 -0.3316 0.0292 -0.0213 0.0391 -0.0419 0.0385 -0.0747 0.1174 -0.5267 0.5764 -0.7391 1.0694 -0.7267m12.4071 0.46c0.5575 0 1.0806 0.2159 1.474 0.6082s0.61 0.9145 0.61 1.4704c0 0.556 -0.2167 1.078 -0.61 1.4698v0.0006l-0.902 0.8995a2.08 2.08 0 0 1 -0.8597 0.5166l-0.0164 0.0047 -0.0058 0.0164a2.05 2.05 0 0 1 -0.474 0.7308l-0.9018 0.8995c-0.3934 0.3924 -0.917 0.6083 -1.4745 0.6083s-1.0806 -0.216 -1.474 -0.6083c-0.813 -0.8107 -0.813 -2.1294 0 -2.9402l0.9019 -0.8995a2.056 2.056 0 0 1 0.858 -0.5143l0.017 -0.0053 0.0058 -0.0158a2.07 2.07 0 0 1 0.4752 -0.7337l0.9018 -0.8995c0.3934 -0.3924 0.9171 -0.6083 1.4745 -0.6083zm0 0.8965a1.18 1.18 0 0 0 -0.8388 0.3462l-0.9018 0.8995a1.181 1.181 0 0 0 -0.3427 0.9252l0.0053 0.0572c0.0323 0.2652 0.149 0.5044 0.3374 0.6917 0.13 0.1296 0.2733 0.2114 0.4471 0.2686a0.9 0.9 0 0 1 0.014 0.1582 0.884 0.884 0 0 1 -0.2609 0.6304l-0.0554 0.0554c-0.3013 -0.1028 -0.5525 -0.253 -0.7794 -0.4792a2.06 2.06 0 0 1 -0.5761 -1.0968l-0.0099 -0.0578 -0.0461 0.0368a1.1 1.1 0 0 0 -0.0876 0.0794l-0.9024 0.8995c-0.4623 0.461 -0.4623 1.212 0 1.673 0.2311 0.2305 0.535 0.346 0.8394 0.3461 0.3043 0 0.6077 -0.1156 0.8388 -0.3462l0.9019 -0.8995c0.4623 -0.461 0.4623 -1.2113 0 -1.673a1.17 1.17 0 0 0 -0.4367 -0.2749 1 1 0 0 1 -0.014 -0.1611c0 -0.2591 0.1023 -0.505 0.2901 -0.6923 0.3019 0.1028 0.57 0.2694 0.7962 0.495 0.3007 0.2999 0.4994 0.679 0.5756 1.0968l0.0105 0.0578 0.0455 -0.0373a1.1 1.1 0 0 0 0.0887 -0.0794l0.902 -0.8996c0.4622 -0.461 0.4628 -1.2124 0 -1.6735a1.18 1.18 0 0 0 -0.8395 -0.3462Zm-9.973 5.1567 -0.0006 0.0006c-0.0793 0.3078 -0.1048 0.8318 -0.506 0.847 -0.033 0.1776 0.1228 0.2445 0.2655 0.1874 0.141 -0.0645 0.2081 0.0508 0.2557 0.1657 0.2177 0.0317 0.5394 -0.0725 0.5516 -0.3298 -0.325 -0.1867 -0.4253 -0.5418 -0.5662 -0.8709"
@@ -142,61 +174,72 @@
             <span>LangChain</span>
           </div>
 
-          <div class="tech-item">
-            <svg
-              role="img"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-              id="Tina--Streamline-Simple-Icons"
-              height="40"
-              width="40"
-            >
-              <desc>Tina Streamline Icon: https://streamlinehq.com</desc>
-              <title>Tina</title>
-              <path
-                d="M14.46 10.662c1.166 -0.965 1.683 -6.666 2.188 -8.715 0.505 -2.05 2.593 -1.946 2.593 -1.946s-0.542 0.944 -0.321 1.648c0.221 0.704 1.736 1.333 1.736 1.333l-0.327 0.861s-0.682 -0.087 -1.088 0.725c-0.406 0.812 0.261 8.853 0.261 8.853s-2.44 4.813 -2.44 6.845 0.962 3.734 0.962 3.734l-1.35 0s-1.98 -2.356 -2.386 -3.533c-0.406 -1.178 -0.243 -2.355 -0.243 -2.355s-2.152 -0.122 -4.061 0c-1.908 0.122 -3.181 1.762 -3.41 2.68 -0.23 0.917 -0.325 3.208 -0.325 3.208l-1.067 0c-0.65 -2.004 -1.166 -2.722 -0.886 -3.734 0.776 -2.804 0.623 -4.394 0.444 -5.102 -0.18 -0.708 -1.395 -1.326 -1.395 -1.326 0.595 -1.213 1.203 -1.796 3.817 -1.857 2.613 -0.06 6.132 -0.354 7.298 -1.319Zm-5.183 8.209s0.136 3.708 1.392 5.129l-1.256 0c-1.464 -1.3 -1.74 -3.852 -1.74 -3.852 0.081 -0.324 0.965 -1.069 1.604 -1.277Z"
-                fill="#000000"
-                stroke-width="1"
-              ></path>
-            </svg>
-            <span>LlamaIndex</span>
+          <div class="tech-item llamaindex-item">
+            <span class="tech-name-badge">LlamaIndex</span>
           </div>
         </div>
+        <span class="bg-num">03</span>
       </div>
-
       <div class="dark">
         <pre id="terminal3"></pre>
       </div>
     </section>
 
     <!-- PROJECTS -->
-    <section class="section">
+    <section id="s4" class="section">
       <div class="light">
-        <h2 class="section-title">CURRENT_PROJECTS</h2>
+        <h2 class="section-title">PROJECTS</h2>
 
         <div class="projects">
-          <a class="project-card" href="YOUR_GITHUB_LINK" target="_blank">
-            <h3>Agentic Workflow Engine</h3>
+          <a
+            class="project-card"
+            href="#"
+            onclick="return false;"
+            aria-label="Multi-Agent Research Platform — coming soon"
+          >
+            <h3>Multi-Agent Research Platform</h3>
             <p>
-              Autonomous task execution with tool calling + reasoning loops.
+              Four specialized agents (Researcher, Analyst, Fact-Checker, Writer)
+              collaborate via LangGraph. Live WebSocket trace shows every reasoning
+              step in real-time.
             </p>
-            <span>Python · FastAPI · LangChain</span>
+            <span>LangGraph · FastAPI · Claude API · WebSockets</span>
+            <div class="badge">IN DEVELOPMENT</div>
           </a>
 
-          <a class="project-card" href="YOUR_GITHUB_LINK" target="_blank">
-            <h3>RAG Intelligence System</h3>
+          <a
+            class="project-card"
+            href="#"
+            onclick="return false;"
+            aria-label="RAG Pipeline + Eval Dashboard — coming soon"
+          >
+            <h3>RAG Pipeline + Eval Dashboard</h3>
             <p>
-              Document ingestion + semantic retrieval + evaluator pipelines.
+              Upload any document, query it, and get faithfulness, relevancy, and
+              groundedness scores per response. Dashboard tracks quality trends
+              over time.
             </p>
-            <span>LlamaIndex · Gemini · PostgreSQL</span>
+            <span>LlamaIndex · pgvector · RAGAS · FastAPI</span>
+            <div class="badge">IN DEVELOPMENT</div>
           </a>
 
-          <a class="project-card" href="YOUR_GITHUB_LINK" target="_blank">
-            <h3>Semantic Video Search</h3>
-            <p>Embedding-based subtitle search engine.</p>
-            <span>NLP · Vector DB · AWS</span>
+          <a
+            class="project-card"
+            href="#"
+            onclick="return false;"
+            aria-label="LLM Gateway and Observability — coming soon"
+          >
+            <h3>LLM Gateway + Observability</h3>
+            <p>
+              Unified proxy across OpenAI, Anthropic, and Gemini. Tracks cost,
+              latency, and token usage per provider with a real-time comparison
+              dashboard.
+            </p>
+            <span>FastAPI · LiteLLM · PostgreSQL · Redis</span>
+            <div class="badge">IN DEVELOPMENT</div>
           </a>
         </div>
+        <span class="bg-num">04</span>
       </div>
 
       <div class="dark">
@@ -205,23 +248,24 @@
     </section>
 
     <!-- EXPERIENCE -->
-    <section class="section">
+    <section id="s5" class="section">
       <div class="light">
         <h2 class="section-title">EXPERIENCE_LOG</h2>
 
         <div class="timeline">
           <div class="job">
             <h3>AI Engineer — RippleLinks</h3>
-            <p>
-              Agentic systems, FastAPI backend, LLM orchestration, AWS infra.
-            </p>
+            <p class="job-date">2024 — Present</p>
+            <p>Agentic systems, FastAPI backend, LLM orchestration, AWS infra.</p>
           </div>
 
           <div class="job">
             <h3>Data Science Intern — Innomatics</h3>
+            <p class="job-date">2023</p>
             <p>RAG pipelines, semantic search, ML experimentation.</p>
           </div>
         </div>
+        <span class="bg-num">05</span>
       </div>
 
       <div class="dark">
@@ -230,26 +274,16 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="section">
+    <section id="s6" class="section">
       <div class="light">
         <h2 class="section-title">CONTACT</h2>
 
         <div class="contact">
           <a href="#" id="emailBtn">Email</a>
-          <a
-            href="https://github.com/iamme1311"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://linkedin.com/in/sarthakagrawal11"
-            target="_blank"
-            rel="noopener noreferrer"
-            >LinkedIn
-          </a>
+          <a href="https://github.com/iamme1311" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="https://linkedin.com/in/sarthakagrawal11" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </div>
+        <span class="bg-num">06</span>
       </div>
 
       <div class="dark">
@@ -265,17 +299,18 @@
         <p>Contact via email</p>
 
         <button id="openMail">
-          <img src="./assets/redirect_icon.png" alt="copy-icon">
+          <img src="./assets/redirect_icon.png" alt="open email client" />
           <span>Open Email Client</span>
         </button>
         <button id="copyMail">
-          <img src="./assets/copy_icon.png" alt="copy-icon">
+          <img src="./assets/copy_icon.png" alt="copy email address" />
           <span>Copy Email</span>
         </button>
 
         <span id="closeModal">×</span>
       </div>
     </div>
+
     <script src="./js/main.js"></script>
   </body>
 </html>
