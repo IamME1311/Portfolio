@@ -158,10 +158,6 @@ pre {
   box-shadow: 0 10px 0 black;
 }
 
-.llamaindex-item {
-  gap: 0;
-}
-
 .tech-name-badge {
   font-size: 18px;
   font-weight: 800;
@@ -217,11 +213,12 @@ pre {
   font-size: 10px;
   font-weight: 800;
   background: #0b0b0b;
-  color: #ffd600;
+  color: #f0efec;
   padding: 3px 8px;
   letter-spacing: 0.1em;
   display: inline-block;
   margin-top: 12px;
+  border-radius: 4px;
 }
 
 /* =====================
@@ -269,6 +266,7 @@ pre {
 .contact a {
   font-weight: 800;
   border: 3px solid black;
+  border-radius: 8px;
   padding: 12px 20px;
   text-decoration: none;
   color: black;
@@ -348,6 +346,7 @@ pre {
   display: inline-block;
   margin-top: 30px;
   border: 3px solid black;
+  border-radius: 8px;
   padding: 12px 20px;
   font-weight: 800;
   text-decoration: none;
