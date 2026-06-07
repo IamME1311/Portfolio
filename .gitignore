@@ -12,3 +12,6 @@ assets/resume.html
 
 *.md
 *mcp
+
+# Project #3 app — separate project, will be moved to its own repo later
+llm-gateway/
