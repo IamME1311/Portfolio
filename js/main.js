@@ -64,7 +64,7 @@ new Typed("#terminal3", {
 
 new Typed("#terminal4", {
   strings: [
-    "> loading projects...\n> multi_agent_research/  [IN DEV]\n> rag_eval_dashboard/   [IN DEV]\n> llm_gateway/          [LIVE]",
+    "> loading projects...\n> multi_agent_research/  [LIVE]\n> rag_eval_dashboard/    [LIVE]\n> llm_gateway/           [LIVE]",
   ],
   typeSpeed: 30,
   showCursor: true,
